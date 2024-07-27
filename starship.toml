@@ -1,5 +1,6 @@
 # https://github.com/andrew8088/dotfiles/blob/main/starship/starship.toml
 format = """
+$hostname\
 $directory\
 $git_branch\
 $git_status\
@@ -60,6 +61,12 @@ style = "bright-purple"
 disabled = false
 # added_style = 'bold blue'
 # format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+style = "bold dimmed white"
+disabled = false
 
 [jobs]
 symbol = ""
